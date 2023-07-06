@@ -5,3 +5,9 @@ databaseChangeLog:
       file: db/changelog/02-insert-data-authors.xml
   - include:
       file: db/changelog/02-insert-data-books.xml
+  - include:
+      file: db/changelog/03-add-column-description-to-books-table-table.xml
+  - include:
+      file: db/changelog/04-add-column-testDdl-to-books-table-table.xml
+  - include:
+      file: db/changelog/05-drop-column-testDdl-and-add-written-at-to-books-table.xml

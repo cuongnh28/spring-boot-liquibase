@@ -1,19 +1,22 @@
-package com.hhimanshu.business;
+package com.hhimanshu.controller;
 
-import com.hhimanshu.persistence.entities.Author;
-import com.hhimanshu.persistence.repositories.AuthorRepository;
+import com.hhimanshu.entities.Author;
+import com.hhimanshu.repositories.AuthorRepository;
 import java.util.stream.Stream;
 import java.util.stream.StreamSupport;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
-@Component
-public class AuthorsManager {
+@RestController
+@RequestMapping("/api/authors")
+public class AuthorsController {
 
   private AuthorRepository authorRepository;
 
   @Autowired
-  public AuthorsManager(AuthorRepository authorRepository) {
+  public AuthorsController(AuthorRepository authorRepository) {
     this.authorRepository = authorRepository;
   }
 

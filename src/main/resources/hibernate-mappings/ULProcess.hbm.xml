@@ -1,0 +1,15 @@
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.hhimanshu.entities">
+    <class name="com.hhimanshu.entities.Book" table="book"
+           schema="public">
+        <meta attribute="class-description">
+            This class contains the books hibernate entity.
+        </meta>
+
+        <id name="id" type="java.lang.Long" column="id" access="field"/>
+        <!--        <version name="version" column="version" type="java.lang.Integer"/>-->
+        <property name="name" column="name" access="field"/>
+    </class>
+</hibernate-mapping>
